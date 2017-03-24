@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+/*
+Name: Layout
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Basic table
+---------------------------------------------------------- */
+
+.table-wrapper > .table {
+    & {
+        width: 100%;
+        table-layout: auto;
+    }
+
+    td,
+    th {
+        text-align: left;
+        vertical-align: top;
+    }
+}

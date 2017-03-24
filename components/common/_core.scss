@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+/*
+Name: Layout
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Breadcrumbs
+---------------------------------------------------------- */
+
+.breadcrumbs {
+    @extend %integento-layout;
+}
+
+.breadcrumbs .items {
+    overflow: hidden;
+}
+
+.breadcrumbs .item {
+    float: left;
+}
+
+.breadcrumbs .item + .item:before {
+    content: '>';
+    margin: 0 0.3em;
+}
+
+/* ----------------------------------------------------------
+  Image container
+---------------------------------------------------------- */
+
+.product-image-container {
+    &,
+    .product-image-wrapper {
+        display: block;
+        z-index: 1;
+        position: relative;
+    }
+
+    .product-image-wrapper img {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        margin: auto;
+    }
+}

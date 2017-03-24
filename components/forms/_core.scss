@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+/*
+Name: Forms
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Labels
+---------------------------------------------------------- */
+
+.field label {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+/* ----------------------------------------------------------
+  Buttons
+---------------------------------------------------------- */
+
+/* Toolbar
+-------------------------- */
+
+.actions-toolbar {
+    & {
+        margin: 2em 0;
+    }
+
+    & > * {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    & > * + * {
+        margin-left: 1em;
+    }
+}
+
+/* Buttons
+-------------------------- */
+
+.actions-toolbar .action {
+    @extend .cssc-button;
+}

@@ -1,0 +1,97 @@
+@charset "UTF-8";
+
+/*
+Name: Layout
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Main
+---------------------------------------------------------- */
+
+%integento-layout {
+    & {
+        @extend %responsive-padding-lr;
+        margin: 0 auto;
+        max-width: $content_width_wide;
+    }
+
+    &:after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+}
+
+.page-main {
+    @extend %integento-layout;
+}
+
+/* ----------------------------------------------------------
+  Grid
+---------------------------------------------------------- */
+
+.page-layout-2columns-left {
+    .column.main {
+        float: right;
+        width: 80%;
+    }
+
+    .sidebar {
+        float: left;
+        clear: left;
+        width: 20%;
+    }
+}
+
+@media($desktop_excluded) {
+    .page-layout-2columns-left .column.main {
+        float: none;
+        width: auto;
+    }
+
+    .page-layout-2columns-left .sidebar {
+        width: 50%;
+    }
+}
+
+@media($mobile_only) {
+    .page-layout-2columns-left .sidebar {
+        float: none;
+        width: auto;
+    }
+}
+
+/* ----------------------------------------------------------
+  Checkout
+---------------------------------------------------------- */
+
+/* OPC
+-------------------------- */
+
+@media($desktop_only) {
+    .opc-sidebar,
+    .opc-wrapper {
+        float: left;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 33.3%;
+    }
+
+    .opc-wrapper {
+        width: 66.7%;
+    }
+}
+
+/* ----------------------------------------------------------
+  Customer
+---------------------------------------------------------- */
+
+/* Login
+-------------------------- */
+
+.login-container {
+    @extend .desktop-grid-table;
+}
