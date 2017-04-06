@@ -68,6 +68,29 @@ License: MIT
   Checkout
 ---------------------------------------------------------- */
 
+/* Cart
+-------------------------- */
+
+@media($desktop_only) {
+    .form-cart,
+    .cart-summary {
+        float: right;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 33.3%;
+    }
+
+    .form-cart {
+        width: 66.7%;
+    }
+
+    .cart-container:after {
+        content: '';
+        display: table;
+        clear: both;
+    }
+}
+
 /* OPC
 -------------------------- */
 

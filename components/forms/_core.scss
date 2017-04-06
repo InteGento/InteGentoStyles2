@@ -8,6 +8,26 @@ License: MIT
 */
 
 /* ----------------------------------------------------------
+  Tooltip
+---------------------------------------------------------- */
+
+._with-tooltip {
+    z-index: 1;
+    position: relative;
+}
+
+._with-tooltip {
+    padding-right: 30px;
+}
+
+._with-tooltip .field-tooltip {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* ----------------------------------------------------------
   Labels
 ---------------------------------------------------------- */
 
@@ -16,6 +36,14 @@ License: MIT
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+/* ----------------------------------------------------------
+  Fieldset
+---------------------------------------------------------- */
+
+.fieldset + .fieldset {
+    margin-top: 2em;
 }
 
 /* ----------------------------------------------------------
@@ -43,6 +71,7 @@ License: MIT
 /* Buttons
 -------------------------- */
 
+.cart.actions .action,
 .actions-toolbar .action {
     @extend .cssc-button;
 }
