@@ -3,7 +3,7 @@
 /*
 Name: Layout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.3.0
 License: MIT
 */
 
@@ -35,14 +35,15 @@ License: MIT
         display: block;
         z-index: 1;
         position: relative;
+        width: auto!important;
+    }
+
+    .product-image-wrapper {
+        padding-bottom: 0!important;
     }
 
     .product-image-wrapper img {
-        z-index: 1;
-        position: absolute;
-        top: 0;
-        right: 0;
-        left: 0;
-        margin: auto;
+        display: block;
+        width: 100%;
     }
 }

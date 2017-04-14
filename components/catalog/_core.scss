@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+/*
+Name: Layout
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Category View
+---------------------------------------------------------- */
+
+.category-view .category-description {
+    @extend %integento-layout;
+}
+
+/* ----------------------------------------------------------
+  Product Items
+---------------------------------------------------------- */
+
+.product-items {
+    z-index: 1;
+    position: relative;
+    margin: 0 -15px;
+}
+
+.product-items .product-item {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0 15px 30px;
+    vertical-align: top;
+}
+
+@media($mobile_only) {
+    .product-items .product-item {
+        width: 100%;
+    }
+}
