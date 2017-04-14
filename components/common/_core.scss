@@ -3,7 +3,7 @@
 /*
 Name: Layout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.2.0
 License: MIT
 */
 
@@ -11,11 +11,8 @@ License: MIT
   Breadcrumbs
 ---------------------------------------------------------- */
 
-.breadcrumbs {
-    @extend %integento-layout;
-}
-
 .breadcrumbs .items {
+    @extend %integento-layout;
     overflow: hidden;
 }
 
