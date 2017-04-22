@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.2.0
 License: MIT
 */
 
@@ -36,6 +36,41 @@ License: MIT
     -webkit-user-select: none;
     -moz-user-select: none;
     user-select: none;
+}
+
+/* ----------------------------------------------------------
+  Field indications
+---------------------------------------------------------- */
+
+[id="password-strength-meter-container"],
+.field div.mage-error {
+    padding: 0.5em 0;
+    font-size: 0.9em;
+}
+
+/* Errors
+-------------------------- */
+
+.field div.mage-error {
+    font-style: italic;
+    color: #C00;
+}
+
+/* Password strength
+-------------------------- */
+
+[id="password-strength-meter-label"] {
+    .password-strength-meter-1 & {
+        color: #CC0000;
+    }
+
+    .password-strength-meter-3 & {
+        color: #ffa500;
+    }
+
+    .password-strength-meter-3 & {
+        color: #00CC00;
+    }
 }
 
 /* ----------------------------------------------------------

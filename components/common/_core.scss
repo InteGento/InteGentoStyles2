@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
 /*
-Name: Layout
+Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.4.0
 License: MIT
 */
 
@@ -46,4 +46,47 @@ License: MIT
         display: block;
         width: 100%;
     }
+}
+
+/* ----------------------------------------------------------
+  Messages
+---------------------------------------------------------- */
+
+/* Wrapper
+-------------------------- */
+
+.page.messages .messages:not(:empty) {
+    @extend %integento-layout;
+    margin-bottom: 2em;
+}
+
+/* Message
+-------------------------- */
+
+%integentostyles-message {
+    & {
+        margin: 0 0 1em;
+        padding: 1em;
+        border: 1px solid;
+    }
+
+    a {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.message.error {
+    @extend %integentostyles-message;
+    color: #C00;
+}
+
+.message.success {
+    @extend %integentostyles-message;
+    color: #090;
+}
+
+.message.warning {
+    @extend %integentostyles-message;
+    color: #CC0;
 }
