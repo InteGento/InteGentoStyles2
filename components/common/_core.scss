@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.0
+Version: 0.5.0
 License: MIT
 */
 
@@ -89,4 +89,63 @@ License: MIT
 .message.warning {
     @extend %integentostyles-message;
     color: #CC0;
+}
+
+/* ----------------------------------------------------------
+  Switcher
+---------------------------------------------------------- */
+
+.switcher-options {
+    display: inline-block;
+    z-index: 3;
+    position: relative;
+    width: auto;
+    height: 2.5em;
+    padding: 0 0.25em;
+    padding-right: 20px;
+    border: 1px solid rgba(0,0,0,0.2);
+    overflow: visible;
+    line-height: 2.5;
+    vertical-align: top;
+    background-color: #fff;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.switcher-options:after {
+    content: '';
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 0.5em;
+    margin-top: -2px;
+    border: 0 solid transparent;
+    border-width: 5px 4px;
+    border-top-color: #000;
+}
+
+.switcher-options .mage-dropdown-dialog {
+    z-index: 2;
+    position: absolute;
+    top: 2.5em;
+    left: -1px;
+    min-width: 100%;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: #fff;
+}
+
+.switcher-options .mage-dropdown-dialog li {
+    padding: 0 0.25em;
+    line-height: 2;
+    white-space: nowrap;
+}
+
+.switcher-options .mage-dropdown-dialog a {
+    display: block;
+}
+
+.switcher-options .mage-dropdown-dialog li + li {
+    border-top: 1px solid rgba(0,0,0,0.2);
 }
