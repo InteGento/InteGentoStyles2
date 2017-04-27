@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.3.0
 License: MIT
 */
 
@@ -25,6 +25,16 @@ License: MIT
     position: absolute;
     top: 0;
     right: 0;
+}
+
+/* ----------------------------------------------------------
+  Radio
+---------------------------------------------------------- */
+
+.field input[type="radio"] + label {
+    display: inline-block;
+    margin-right: 1em;
+    vertical-align: top;
 }
 
 /* ----------------------------------------------------------
@@ -64,10 +74,11 @@ License: MIT
         color: #CC0000;
     }
 
-    .password-strength-meter-3 & {
+    .password-strength-meter-2 & {
         color: #ffa500;
     }
 
+    .password-strength-meter-4 &,
     .password-strength-meter-3 & {
         color: #00CC00;
     }
