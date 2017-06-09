@@ -3,7 +3,7 @@
 /*
 Name: Layout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.3.0
 License: MIT
 */
 
@@ -33,32 +33,56 @@ License: MIT
   Grid
 ---------------------------------------------------------- */
 
-.page-layout-2columns-left {
+.page-layout-2columns-left,
+.page-layout-2columns-right {
     .column.main {
-        float: right;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         width: 70%;
+    }
+
+    .sidebar {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 30%;
+    }
+}
+
+.page-layout-2columns-left {
+    .column.main {
+        float: right;
         padding-left: 20px;
     }
 
     .sidebar {
         float: left;
-        clear: left;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 30%;
         padding-right: 20px;
     }
 }
 
+.page-layout-2columns-right {
+    .column.main {
+        float: left;
+        padding-right: 20px;
+    }
+
+    .sidebar {
+        float: left;
+        clear: right;
+        padding-left: 20px;
+    }
+}
+
 @media($desktop_excluded) {
+    .page-layout-2columns-right .column.main,
     .page-layout-2columns-left .column.main {
         float: none;
         width: auto;
+        padding-right: 0;
         padding-left: 0;
     }
 
+    .page-layout-2columns-right .sidebar,
     .page-layout-2columns-left .sidebar {
         width: 50%;
         padding-top: 20px;
@@ -71,10 +95,12 @@ License: MIT
 }
 
 @media($mobile_only) {
+    .page-layout-2columns-right .sidebar,
     .page-layout-2columns-left .sidebar {
         float: none;
         width: auto;
         padding-right: 0;
+        padding-left: 0;
     }
 }
 
