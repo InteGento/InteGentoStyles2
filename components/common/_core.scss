@@ -149,3 +149,22 @@ License: MIT
 .switcher-options .mage-dropdown-dialog li + li {
     border-top: 1px solid rgba(0,0,0,0.2);
 }
+
+/* ----------------------------------------------------------
+  Pager
+---------------------------------------------------------- */
+
+.toolbar-products {
+    .pages .label {
+        display: none;
+    }
+
+    .pages-items {
+        text-align: right;
+    }
+
+    .pages-items > li {
+        display: inline-block;
+        vertical-align: top;
+    }
+}
