@@ -168,3 +168,78 @@ License: MIT
         vertical-align: top;
     }
 }
+
+/* ----------------------------------------------------------
+  Modals
+---------------------------------------------------------- */
+
+.modals-wrapper {
+    .modals-overlay {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        background-color: rgba(#000,0.8);
+    }
+}
+
+.modal-popup {
+    &,
+    .modal-inner-wrap {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    & {
+        visibility: hidden;
+        z-index: 99;
+        position: fixed;
+        margin: auto;
+        opacity: 0;
+        -webkit-transition: opacity 0.3s ease,visiblity 0.3s ease;
+        transition: opacity 0.3s ease,visiblity 0.3s ease;
+    }
+
+    &._show {
+        visibility: visible;
+        opacity: 0.999;
+    }
+
+    .modal-inner-wrap {
+        z-index: 1;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 700px;
+        height: 450px;
+        max-height: 90vh;
+        max-width: 90vw;
+        background-color: #fff;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .modal-content {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        padding: 15px;
+        overflow: auto;
+    }
+
+    .modal-inner-wrap .modal-header {
+        z-index: 2;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+    }
+}
