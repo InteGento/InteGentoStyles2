@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
 /*
-Name: Layout
+Name: Catalog
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.1.1
 License: MIT
 */
+
+$font-size: 14px!default;
 
 /* ----------------------------------------------------------
   Category View
@@ -23,6 +25,8 @@ License: MIT
     z-index: 1;
     position: relative;
     margin: 0 -15px;
+    font-size: 0;
+    white-space: nowrap;
 }
 
 .product-items .product-item {
@@ -31,6 +35,8 @@ License: MIT
     box-sizing: border-box;
     width: 50%;
     padding: 0 15px 30px;
+    font-size: $font-size;
+    white-space: normal;
     vertical-align: top;
 }
 

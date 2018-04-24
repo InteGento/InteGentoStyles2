@@ -3,9 +3,16 @@
 /*
 Name: Layout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.3.1
 License: MIT
 */
+
+$desktop-padding: 45px !default;
+$desktop-padding-neg: -45px !default;
+$tablet-padding: 30px !default;
+$tablet-padding-neg: -30px !default;
+$mobile-padding: 15px !default;
+$mobile-padding-neg: -15px !default;
 
 /* ----------------------------------------------------------
   Main
@@ -51,25 +58,25 @@ License: MIT
 .page-layout-2columns-left {
     .column.main {
         float: right;
-        padding-left: 20px;
+        padding-left: $desktop-padding/2;
     }
 
     .sidebar {
         float: left;
-        padding-right: 20px;
+        padding-right: $desktop-padding/2;
     }
 }
 
 .page-layout-2columns-right {
     .column.main {
         float: left;
-        padding-right: 20px;
+        padding-right: $desktop-padding/2;
     }
 
     .sidebar {
         float: left;
         clear: right;
-        padding-left: 20px;
+        padding-left: $desktop-padding/2;
     }
 }
 
