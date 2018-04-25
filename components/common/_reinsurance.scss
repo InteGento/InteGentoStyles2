@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+$font-size: 14px!default;
+
+/* ----------------------------------------------------------
+  Reinsurance - icons
+---------------------------------------------------------- */
+
+%reinsurance-icons {
+    & {
+        display: table;
+        width: 100%;
+        max-width: 100vw;
+        table-layout: fixed;
+        word-spacing: -0.3em;
+    }
+
+    & > * {
+        display: table-cell;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: 0 1em;
+        text-align: center;
+        word-spacing: normal;
+        vertical-align: top;
+    }
+
+    a {
+        display: block;
+    }
+
+    i[class*="icon_"] {
+        display: block;
+        height: 1em;
+        margin-bottom: 0.3em;
+        font-size: 2em;
+    }
+
+    strong {
+        display: block;
+    }
+}
+
+@media($desktop_excluded) {
+    %reinsurance-icons {
+        display: block;
+        font-size: 0;
+    }
+
+    %reinsurance-icons > * {
+        display: inline-block;
+        width: 50%;
+        margin-bottom: 2em;
+        font-size: $font-size;
+    }
+}
+
+@media($mobile_only) {
+    %reinsurance-icons > * {
+        display: block;
+        width: 100%;
+    }
+}

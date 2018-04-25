@@ -3,7 +3,7 @@
 /*
 Name: Integento Styles 2
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.9.2
+Version: 0.9.3
 Dependencies : SassCSSCommon
 License: MIT
 */
@@ -22,3 +22,9 @@ License: MIT
 ---------------------------------------------------------- */
 
 @import "components/catalog/core";
+
+/* ----------------------------------------------------------
+  Modules
+---------------------------------------------------------- */
+
+@import "components/common/reinsurance";
