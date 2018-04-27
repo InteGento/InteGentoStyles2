@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Customer
+---------------------------------------------------------- */
+
+/* Login
+-------------------------- */
+
+.login-container {
+    @extend .desktop-grid-table;
+}
+
+/* Dashboard
+-------------------------- */
+
+.block[class*="block-dashboard"] .block-content {
+    @extend .desktop-grid-table;
+    margin-bottom: 20px;
+}

@@ -53,6 +53,8 @@ License: MIT
 ---------------------------------------------------------- */
 
 [id="password-strength-meter-container"],
+%integento-field-error,
+.field div.field-error,
 .field div.mage-error {
     padding: 0.5em 0;
     font-size: 0.9em;
@@ -61,6 +63,8 @@ License: MIT
 /* Errors
 -------------------------- */
 
+%integento-field-error,
+.field div.field-error,
 .field div.mage-error {
     font-style: italic;
     color: #C00;

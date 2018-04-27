@@ -13,7 +13,6 @@ $tablet-padding: 30px !default;
 $tablet-padding-neg: -30px !default;
 $mobile-padding: 15px !default;
 $mobile-padding-neg: -15px !default;
-
 /* ----------------------------------------------------------
   Main
 ---------------------------------------------------------- */
@@ -95,15 +94,20 @@ $mobile-padding-neg: -15px !default;
         padding-top: 20px;
     }
 
+    .page-layout-2columns-left .sidebar {
+        padding-right: $tablet-padding/2;
+    }
+
     .page-layout-2columns-left .sidebar + .sidebar {
         clear: none;
         padding-right: 0;
+        padding-left: $tablet-padding/2;
     }
 }
 
 @media($mobile_only) {
-    .page-layout-2columns-right .sidebar,
-    .page-layout-2columns-left .sidebar {
+    .page-layout-2columns-right .sidebar.sidebar,
+    .page-layout-2columns-left .sidebar.sidebar {
         float: none;
         width: auto;
         padding-right: 0;
@@ -153,22 +157,4 @@ $mobile-padding-neg: -15px !default;
     .opc-wrapper {
         width: 66.7%;
     }
-}
-
-/* ----------------------------------------------------------
-  Customer
----------------------------------------------------------- */
-
-/* Login
--------------------------- */
-
-.login-container {
-    @extend .desktop-grid-table;
-}
-
-/* Dashboard
--------------------------- */
-
-.block[class*="block-dashboard"] .block-content {
-    @extend .desktop-grid-table;
 }
