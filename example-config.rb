@@ -1,10 +1,3 @@
-# Monkey patch : Removes all comments completely
-class Sass::Tree::Visitors::Perform < Sass::Tree::Visitors::Base
-  def visit_comment(node)
-    return []
-  end
-end
-
 # Theme config
 integento_theme_id = "Mytheme"
 integento_theme_lang = "fr_FR"
@@ -24,6 +17,29 @@ output_style = :compact
 relative_assets = true
 line_comments = false
 preferred_syntax = :scss
+
+# Removes all comments completely
+class Sass::Tree::Visitors::Perform < Sass::Tree::Visitors::Base
+  def visit_comment(node)
+    return []
+  end
+end
+
+# Clean up generated CSS file
+on_stylesheet_saved do |filename|
+  css = File.open(filename, 'r')
+  content = css.read
+  # Remove double line breaks
+  content = content.gsub("\n\n", "\n")
+  # Remove trailing spaces
+  content = content.gsub(/\s*\n\s*/, "\n")
+  content = content.gsub(/[ ]?([,:;\{\}\>\+])[ ]?/, "\\1")
+  content = content.gsub(/\@media\ \(/, "@media(")
+  # Useless semicolon
+  content = content.gsub(/;\}/, "}")
+  # Save file
+  File.write(filename, content)
+end
 
 # Copy to a secondary dir
 require 'fileutils'
