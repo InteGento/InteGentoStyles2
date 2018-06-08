@@ -8,7 +8,6 @@ License: MIT
 */
 
 $font-size: 14px!default;
-
 /* ----------------------------------------------------------
   Category View
 ---------------------------------------------------------- */
@@ -18,30 +17,68 @@ $font-size: 14px!default;
 }
 
 /* ----------------------------------------------------------
-  Product Items
+  Product list
 ---------------------------------------------------------- */
 
-.product-items {
+/* Wrapper
+-------------------------- */
+
+.products-grid:after {
+    content: '';
+    display: table;
+    clear: both;
+    width: 100%;
+    height: 1px;
+}
+
+/* List
+-------------------------- */
+
+.product-items.list {
     z-index: 1;
     position: relative;
     margin: 0 -15px;
-    font-size: 0;
-    white-space: nowrap;
 }
 
-.product-items .product-item {
-    display: inline-block;
+.product-items.list .product-item {
+    float: left;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     padding: 0 15px 30px;
-    font-size: $font-size;
-    white-space: normal;
-    vertical-align: top;
+}
+
+@media($large_only) {
+    .product-items.list .product-item {
+        width: 33.3%;
+    }
+}
+
+@media($desktop_excluded) and ($mobile_excluded) {
+    .product-items.list .product-item {
+        width: 33.3%;
+    }
 }
 
 @media($mobile_only) {
-    .product-items .product-item {
+    .product-items.list .product-item {
+        width: 50%;
+    }
+}
+
+@media($tiny_only) {
+    .product-items.list .product-item {
         width: 100%;
+    }
+}
+
+/* Item
+-------------------------- */
+
+.product-item {
+    button.tocart {
+        display: block;
+        width: 100%;
+        min-width: 1px;
     }
 }
