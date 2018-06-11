@@ -12,8 +12,15 @@ License: MIT
 ---------------------------------------------------------- */
 
 .breadcrumbs .items {
-    @extend %integento-layout;
-    overflow: hidden;
+    & {
+        @extend %integento-layout;
+        overflow: hidden;
+    }
+
+    .page-main .columns & {
+        padding-right: 0;
+        padding-left: 0;
+    }
 }
 
 .breadcrumbs .item {
