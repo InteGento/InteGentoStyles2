@@ -41,11 +41,18 @@ License: MIT
   Labels
 ---------------------------------------------------------- */
 
-.field label {
-    cursor: pointer;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    user-select: none;
+.field {
+    label {
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+    }
+
+    &.required > label:after {
+        content: '*';
+        margin-left: 0.3em;
+    }
 }
 
 /* ----------------------------------------------------------
@@ -75,7 +82,7 @@ License: MIT
 
 [id="password-strength-meter-label"] {
     .password-strength-meter-1 & {
-        color: #CC0000;
+        color: #C00;
     }
 
     .password-strength-meter-2 & {
@@ -84,7 +91,7 @@ License: MIT
 
     .password-strength-meter-4 &,
     .password-strength-meter-3 & {
-        color: #00CC00;
+        color: #0C0;
     }
 }
 

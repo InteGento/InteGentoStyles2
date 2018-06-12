@@ -14,7 +14,12 @@
 /* Dashboard
 -------------------------- */
 
-.block[class*="block-dashboard"] .block-content {
-    @extend .desktop-grid-table;
-    margin-bottom: 20px;
+.block-addresses-list,
+.block-dashboard-info,
+.block-dashboard-addresses,
+.block-addresses-default {
+    .block-content {
+        @extend .desktop-grid-table;
+        margin-bottom: 20px;
+    }
 }
