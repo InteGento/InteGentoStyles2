@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.2
+Version: 0.6.3
 License: MIT
 */
 
@@ -144,8 +144,8 @@ License: MIT
         border: 1px solid rgba(0,0,0,0.2);
         opacity: 0;
         background-color: #fff;
-        -webkit-transition: opacity 0.3s ease,visiblity 0.3s ease;
-        transition: opacity 0.3s ease,visiblity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
     .switcher-dropdown[aria-hidden="false"] {
@@ -219,8 +219,8 @@ License: MIT
         position: fixed;
         margin: auto;
         opacity: 0;
-        -webkit-transition: opacity 0.3s ease,visiblity 0.3s ease;
-        transition: opacity 0.3s ease,visiblity 0.3s ease;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
     &._show {
