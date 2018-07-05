@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.4.0
 License: MIT
 */
 
@@ -81,14 +81,18 @@ License: MIT
 -------------------------- */
 
 [id="password-strength-meter-label"] {
+    .password-weak &,
     .password-strength-meter-1 & {
         color: #C00;
     }
 
+    .password-medium &,
     .password-strength-meter-2 & {
         color: #ffa500;
     }
 
+    .password-strong &,
+    .password-very-strong &,
     .password-strength-meter-4 &,
     .password-strength-meter-3 & {
         color: #0C0;
@@ -122,6 +126,23 @@ License: MIT
 
     & > * + * {
         margin-left: 1em;
+    }
+}
+
+@media(max-width:500px) {
+    .actions-toolbar > * {
+        display: block;
+        margin: 1em 0;
+    }
+
+    .actions-toolbar > * + * {
+        margin-left: 0;
+    }
+
+    .actions-toolbar a[class*="action"],
+    .actions-toolbar button {
+        display: block;
+        width: 100%;
     }
 }
 
