@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*
+Name: Checkout
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.checkout-container {
+    z-index: 1;
+    position: relative;
+}
+
+/* ----------------------------------------------------------
+  Loader
+---------------------------------------------------------- */
+
+.loading-mask {
+    @extend .absolute-cover!optional;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: $desktop-padding;
+    text-align: center;
+    background-color: rgba(#FFF,0.2);
+}
+
+.loading-mask .loader {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
+    width: 3em;
+    height: 3em;
+    vertical-align: top;
+}
+
+.loading-mask .loader img {
+    width: 100%;
+}

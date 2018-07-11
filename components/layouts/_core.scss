@@ -3,7 +3,7 @@
 /*
 Name: Layout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.1
+Version: 0.4.0
 License: MIT
 */
 
@@ -13,6 +13,7 @@ $tablet-padding: 30px !default;
 $tablet-padding-neg: -30px !default;
 $mobile-padding: 15px !default;
 $mobile-padding-neg: -15px !default;
+
 /* ----------------------------------------------------------
   Main
 ---------------------------------------------------------- */
@@ -119,42 +120,85 @@ $mobile-padding-neg: -15px !default;
   Checkout
 ---------------------------------------------------------- */
 
-/* Cart
--------------------------- */
-
-@media($desktop_only) {
-    .form-cart,
-    .cart-summary {
-        float: right;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 33.3%;
-    }
-
-    .form-cart {
-        width: 66.7%;
-    }
-
-    .cart-container:after {
+%integento2-checkout-layout-wrapper {
+    &:after {
         content: '';
         display: table;
         clear: both;
+        width: 100%;
+    }
+}
+
+%integento2-checkout-layout-content,
+%integento2-checkout-layout-sidebar {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+@media($mobile_excluded) {
+    %integento2-checkout-layout-content {
+        width: 60%;
+        padding-right: $tablet-padding/2;
+    }
+
+    %integento2-checkout-layout-sidebar {
+        width: 40%;
+        padding-left: $tablet-padding/2;
+    }
+}
+
+@media($desktop_only) {
+    %integento2-checkout-layout-content {
+        width: 66.7%;
+        padding-right: $desktop-padding/2;
+    }
+
+    %integento2-checkout-layout-sidebar {
+        width: 33.3%;
+        padding-left: $desktop-padding/2;
+    }
+}
+
+/* Cart
+-------------------------- */
+
+.cart-container {
+    @extend %integento2-checkout-layout-wrapper;
+}
+
+.cart-summary {
+    @extend %integento2-checkout-layout-sidebar;
+}
+
+.form-cart {
+    @extend %integento2-checkout-layout-content;
+}
+
+@media($mobile_excluded) {
+    .cart-summary,
+    .form-cart {
+        float: right;
     }
 }
 
 /* OPC
 -------------------------- */
 
-@media($desktop_only) {
+.checkout-container {
+    @extend %integento2-checkout-layout-wrapper;
+}
+
+.opc-sidebar {
+    @extend %integento2-checkout-layout-sidebar;
+}
+
+.opc-wrapper {
+    @extend %integento2-checkout-layout-content;
+}
+
+@media($mobile_excluded) {
     .opc-sidebar,
     .opc-wrapper {
         float: left;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        width: 33.3%;
-    }
-
-    .opc-wrapper {
-        width: 66.7%;
     }
 }

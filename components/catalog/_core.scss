@@ -3,7 +3,7 @@
 /*
 Name: Catalog
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.1
+Version: 0.2.0
 License: MIT
 */
 
@@ -23,6 +23,7 @@ $font-size: 14px!default;
 /* Wrapper
 -------------------------- */
 
+.product-items:after,
 .products-grid:after {
     content: '';
     display: table;
@@ -37,7 +38,7 @@ $font-size: 14px!default;
 .product-items.list {
     z-index: 1;
     position: relative;
-    margin: 0 -15px;
+    margin: 0 $desktop-padding-neg/2;
 }
 
 .product-items.list .product-item {
@@ -45,7 +46,7 @@ $font-size: 14px!default;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
-    padding: 0 15px 30px;
+    padding: 0 $desktop-padding/2 $desktop-padding*2;
 }
 
 @media($large_only) {
@@ -55,14 +56,24 @@ $font-size: 14px!default;
 }
 
 @media($desktop_excluded) and ($mobile_excluded) {
+    .product-items.list {
+        margin: 0 $tablet-padding-neg/2;
+    }
+
     .product-items.list .product-item {
         width: 33.3%;
+        padding: 0 $tablet-padding/2 $tablet-padding*2;
     }
 }
 
 @media($mobile_only) {
+    .product-items.list {
+        margin: 0 $mobile-padding-neg/2;
+    }
+
     .product-items.list .product-item {
         width: 50%;
+        padding: 0 $mobile-padding/2 $mobile-padding*2;
     }
 }
 
@@ -80,5 +91,19 @@ $font-size: 14px!default;
         display: block;
         width: 100%;
         min-width: 1px;
+    }
+}
+
+/* ----------------------------------------------------------
+  Prices
+---------------------------------------------------------- */
+
+.price-box {
+    .old-price {
+        text-decoration: line-through;
+    }
+
+    .special-price + .old-price {
+        margin-left: 0.3em;
     }
 }
