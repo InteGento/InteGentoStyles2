@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.0
+Version: 0.4.1
 License: MIT
 */
 
@@ -49,9 +49,12 @@ License: MIT
         user-select: none;
     }
 
+    &.required.admin__control-fields > .label span:after,
+    &._required > .label span:after,
     &.required > label:after {
         content: '*';
         margin-left: 0.3em;
+        font-weight: bold;
     }
 }
 
@@ -74,6 +77,13 @@ License: MIT
 .field div.field-error,
 .field div.mage-error {
     font-style: italic;
+    color: #C00;
+}
+
+%integento-field-error-content,
+input.mage-error,
+.field._error input[aria-invalid="true"] {
+    border-color: #C00;
     color: #C00;
 }
 
