@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Navigation
+---------------------------------------------------------- */
+
+.navigation[data-action="navigation"] {
+    li.level1.parent > a {
+        font-weight: bold;
+    }
+}

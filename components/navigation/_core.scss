@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+/*
+Name: Navigation
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Navigation
+---------------------------------------------------------- */
+
+.navigation[data-action="navigation"] {
+    & {
+        z-index: 2;
+        position: relative;
+    }
+
+    li.level0 {
+        vertical-align: top;
+    }
+
+    li.level0 > a {
+        display: block;
+    }
+
+    li.level0 > .block-submenu {
+        background: #FFF;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
+    }
+
+    li.level0:hover > .block-submenu {
+        visibility: visible;
+        opacity: 0.999;
+    }
+
+    li.level1 {
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        vertical-align: top;
+    }
+}
+
+/* Line navigation
+-------------------------- */
+
+@media($desktop_only) {
+    .navigation[data-action="navigation"] {
+        text-align: center;
+    }
+
+    .navigation[data-action="navigation"] li.level0 {
+        display: inline-block;
+    }
+
+    .navigation[data-action="navigation"] li.level0 > a {
+        padding: 0 1em;
+    }
+
+    .navigation[data-action="navigation"] li.level0 > .block-submenu {
+        visibility: hidden;
+        z-index: 1;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        margin: auto;
+        opacity: 0;
+    }
+
+    .navigation[data-action="navigation"] li.level1 {
+        display: inline-block;
+    }
+
+    .navigation[data-action="navigation"] * + li.level1 {
+        padding-left: 1em;
+    }
+}
