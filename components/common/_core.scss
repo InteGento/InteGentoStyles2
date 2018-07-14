@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.3
+Version: 0.7.0
 License: MIT
 */
 
@@ -205,18 +205,14 @@ License: MIT
 }
 
 .modal-popup {
-    &,
-    .modal-inner-wrap {
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-    }
-
     & {
         visibility: hidden;
         z-index: 99;
         position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
         margin: auto;
         opacity: 0;
         -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
@@ -227,8 +223,10 @@ License: MIT
         visibility: visible;
         opacity: 0.999;
     }
+}
 
-    .modal-inner-wrap {
+.modals-wrapper .modal-inner-wrap {
+    & {
         z-index: 1;
         position: absolute;
         top: 50%;
@@ -242,34 +240,76 @@ License: MIT
         transform: translateX(-50%) translateY(-50%);
     }
 
-    .modal-content {
+    .modal-header,
+    .modal-content,
+    .modal-footer {
         z-index: 1;
         position: absolute;
-        top: 1em;
         right: 0;
-        bottom: 2em;
         left: 0;
-        margin: auto;
-        padding: 1em;
-        overflow: auto;
+        padding-right: 1em;
+        padding-left: 1em;
     }
 
-    .modal-inner-wrap .modal-header {
+    .modal-header,
+    .modal-footer {
         z-index: 2;
+        background-color: #fff;
+    }
+
+    .modal-header {
+        height: 4em;
+        line-height: 4em;
+    }
+
+    .modal-header .modal-title {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
+    }
+
+    .modal-header .action-close {
+        z-index: 1;
         position: absolute;
         top: 1em;
         right: 1em;
     }
 
-    .modal-inner-wrap .modal-footer {
-        z-index: 2;
-        position: absolute;
+    .modal-content {
+        top: 4em;
+        bottom: 5em;
+        margin: auto;
+        overflow: auto;
+    }
+
+    .modal-content:first-child {
+        top: 0;
+    }
+
+    .modal-content:last-child {
+        bottom: 0;
+    }
+
+    .modal-footer {
+        bottom: 0;
+        height: 5em;
+        line-height: 5em;
+    }
+}
+
+@media($mobile_only) {
+    .modals-wrapper .modal-inner-wrap {
+        overflow: auto;
+    }
+
+    .modals-wrapper .modal-header,
+    .modals-wrapper .modal-content,
+    .modals-wrapper .modal-footer {
+        z-index: 1;
+        position: relative;
+        top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        height: 2em;
-        padding: 0 0.5em;
-        line-height: 2em;
-        background-color: #fff;
     }
 }
