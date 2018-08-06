@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.2.0
 License: MIT
 */
 
@@ -40,4 +40,42 @@ License: MIT
 
 .loading-mask .loader img {
     width: 100%;
+}
+
+/* ----------------------------------------------------------
+  Options
+---------------------------------------------------------- */
+
+dl.item-options {
+    & {
+        overflow: hidden;
+        text-align: left;
+    }
+
+    &,
+    & dd,
+    & dl {
+        font: inherit;
+        -webkit-hyphens: auto;
+        -moz-hyphens: auto;
+        hyphens: auto;
+        word-wrap: break-word;
+    }
+
+    & dt {
+        float: left;
+    }
+
+    & dd:after {
+        content: '';
+        display: block;
+        clear: both;
+        height: 1px;
+        line-height: 0;
+    }
+
+    & dt:after {
+        content: ':';
+        margin: 0 0.3em;
+    }
 }
