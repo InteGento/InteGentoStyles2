@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.3.0
 License: MIT
 */
 
@@ -14,6 +14,22 @@ License: MIT
 .checkout-container {
     z-index: 1;
     position: relative;
+}
+
+/* ----------------------------------------------------------
+  Reset
+---------------------------------------------------------- */
+
+.opc-summary-wrapper .modal-header .action-close {
+    display: none;
+}
+
+/* ----------------------------------------------------------
+  Sidebar
+---------------------------------------------------------- */
+
+.opc-block-summary .minicart-items {
+    display: block!important;
 }
 
 /* ----------------------------------------------------------
@@ -77,5 +93,36 @@ dl.item-options {
     & dt:after {
         content: ':';
         margin: 0 0.3em;
+    }
+}
+
+/* ----------------------------------------------------------
+  Addresses
+---------------------------------------------------------- */
+
+.shipping-address-items {
+    & {
+        @extend .desktop-grid-table!optional;
+    }
+
+    .shipping-address-item .action {
+        margin-top: 1em;
+    }
+
+    .shipping-address-item.selected-item .action {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------
+  Payment Methods
+---------------------------------------------------------- */
+
+.payment-method {
+    &:not(._active) legend.legend,
+    &:not(._active) .fieldset,
+    &:not(._active) > .payment-method-content > br,
+    &:not(._active) > .payment-method-content > .actions-toolbar {
+        display: none;
     }
 }
