@@ -3,9 +3,32 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.7.0
+Version: 0.8.0
 License: MIT
 */
+
+/* ----------------------------------------------------------
+  Skip content
+---------------------------------------------------------- */
+
+.action.skip {
+    &.contentarea {
+        display: inline-block;
+        z-index: 999;
+        position: fixed;
+        top: -10em;
+        left: 0;
+        padding: 1em;
+        border: 2px dashed;
+        vertical-align: top;
+        outline: 0;
+        background-color: #fff;
+    }
+
+    &.contentarea:focus {
+        top: 0;
+    }
+}
 
 /* ----------------------------------------------------------
   Breadcrumbs

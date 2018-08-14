@@ -1,0 +1,50 @@
+@charset "UTF-8";
+/*
+Name: Mini Cart
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.1.0
+License: MIT
+*/
+
+/* ----------------------------------------------------------
+  Mini cart
+---------------------------------------------------------- */
+
+.page-header .minicart-wrapper {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    .mage-dropdown-dialog {
+        display: block!important;
+        visibility: hidden;
+        z-index: 1;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        text-align: left;
+        opacity: 0;
+        background-color: #fff;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
+    }
+
+    &.active .mage-dropdown-dialog {
+        visibility: visible;
+        opacity: 0.999;
+    }
+
+    .block-minicart .block-title {
+        display: none;
+    }
+
+    .block-minicart .block-content {
+        background-color: #fff;
+    }
+
+    .counter-label,
+    .counter.empty {
+        display: none;
+    }
+}
