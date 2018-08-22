@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.4.0
 License: MIT
 */
 
@@ -124,5 +124,26 @@ dl.item-options {
     &:not(._active) > .payment-method-content > br,
     &:not(._active) > .payment-method-content > .actions-toolbar {
         display: none;
+    }
+}
+
+/* ----------------------------------------------------------
+  Tables
+---------------------------------------------------------- */
+
+.table.totals,
+.table-totals {
+    .table-caption {
+        display: none;
+    }
+
+    th:first-child,
+    td:first-child {
+        text-align: left;
+    }
+
+    th:last-child,
+    td:last-child {
+        text-align: right;
     }
 }

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+$minicart_image_item_width: 70px!default;
+$minicart_image_item_margin: 10px!default;
+/* ----------------------------------------------------------
+  Mini cart - items
+---------------------------------------------------------- */
+
+.minicart-items {
+    .product-item {
+        z-index: 1;
+        position: relative;
+        padding-left: $minicart_image_item_width + $minicart_image_item_margin;
+        min-height: $minicart_image_item_width;
+    }
+
+    .product > .product-image-container,
+    .product > .product-item-photo {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $minicart_image_item_width!important;
+    }
+}
