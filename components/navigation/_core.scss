@@ -3,10 +3,12 @@
 /*
 Name: Navigation
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.2.0
 License: MIT
 */
 
+$has_desktop_menu: $desktop_only!default;
+$has_mobile_menu: $desktop_excluded!default;
 /* ----------------------------------------------------------
   Navigation
 ---------------------------------------------------------- */
@@ -46,7 +48,7 @@ License: MIT
 /* Line navigation
 -------------------------- */
 
-@media($desktop_only) {
+@media($has_desktop_menu) {
     .navigation[data-action="navigation"] {
         text-align: center;
     }
@@ -58,6 +60,20 @@ License: MIT
     .navigation[data-action="navigation"] li.level0 > a {
         padding: 0 1em;
     }
+}
+
+/* Submenu
+-------------------------- */
+
+.navigation[data-action="navigation"] li.level1 {
+    text-align: left;
+}
+
+@media($has_desktop_menu) {
+    .navigation[data-action="navigation"] li.level1 {
+        display: inline-block;
+        padding-right: 1em;
+    }
 
     .navigation[data-action="navigation"] li.level0 > .block-submenu {
         visibility: hidden;
@@ -67,14 +83,38 @@ License: MIT
         right: 0;
         left: 0;
         margin: auto;
+        text-align: center;
         opacity: 0;
     }
+}
 
-    .navigation[data-action="navigation"] li.level1 {
-        display: inline-block;
+/* Mobile
+-------------------------- */
+
+@media($has_mobile_menu) {
+    .navigation[data-action="navigation"] {
+        visibility: hidden;
+        z-index: 9;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: auto;
+        overflow: auto;
+        text-align: left;
+        opacity: 0;
+        background-color: #fff;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
-    .navigation[data-action="navigation"] * + li.level1 {
-        padding-left: 1em;
+    .has--opened-main-menu .navigation[data-action="navigation"] {
+        visibility: visible;
+        opacity: 0.999;
+    }
+
+    .navigation[data-action="navigation"] li.level0 {
+        padding: $mobile-padding/2 $mobile-padding;
     }
 }
