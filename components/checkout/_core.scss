@@ -3,10 +3,11 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.0
+Version: 0.5.0
 License: MIT
 */
 
+$mobile-padding: 15px!default;
 /* ----------------------------------------------------------
   Layout
 ---------------------------------------------------------- */
@@ -118,13 +119,20 @@ dl.item-options {
   Payment Methods
 ---------------------------------------------------------- */
 
-.payment-method {
-    &:not(._active) legend.legend,
-    &:not(._active) .fieldset,
-    &:not(._active) > .payment-method-content > br,
-    &:not(._active) > .payment-method-content > .actions-toolbar {
+.payment-method:not(._active) {
+    legend.legend,
+    .fieldset,
+    & > .payment-method-content > p,
+    & > .payment-method-content > br,
+    & > .payment-method-content > .payment-method-billing-address,
+    & > .payment-method-content > .actions-toolbar {
         display: none;
     }
+}
+
+.payment-method-title label > * {
+    display: inline-block;
+    vertical-align: middle;
 }
 
 /* ----------------------------------------------------------
@@ -145,5 +153,20 @@ dl.item-options {
     th:last-child,
     td:last-child {
         text-align: right;
+    }
+}
+
+/* ----------------------------------------------------------
+  Empty cart
+---------------------------------------------------------- */
+
+.cart-empty {
+    & {
+        padding-bottom: $mobile-padding;
+        text-align: center;
+    }
+
+    a {
+        border-bottom: 1px solid currentColor;
     }
 }

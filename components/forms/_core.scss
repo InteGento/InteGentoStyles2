@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.0
+Version: 0.6.1
 License: MIT
 */
 
@@ -270,7 +270,7 @@ input.mage-error,
 
 .cart.actions .action,
 .actions-toolbar .action {
-    @extend .cssc-button;
+    @extend %cssc-button;
 }
 
 /* ----------------------------------------------------------
