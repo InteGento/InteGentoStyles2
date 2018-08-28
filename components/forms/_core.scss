@@ -3,30 +3,137 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.0
+Version: 0.6.0
 License: MIT
 */
 
 $fieldset-margin: 2em!default;
-
+$tooltip_color_bg: $color-bg!default;
+$tooltip_color_border: $color-border!default;
 /* ----------------------------------------------------------
   Tooltip
 ---------------------------------------------------------- */
 
 ._with-tooltip {
-    z-index: 1;
-    position: relative;
+    & {
+        z-index: 1;
+        position: relative;
+        padding-right: 30px;
+    }
+
+    .field-tooltip {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin-top: 5px;
+    }
+
+    .field-tooltip:hover {
+        z-index: 99;
+    }
 }
 
-._with-tooltip {
-    padding-right: 30px;
+.field-tooltip-action {
+    & {
+        display: inline-block;
+        z-index: 2;
+        position: relative;
+        width: 2em;
+        height: 2em;
+        font-size: 11px;
+        cursor: pointer;
+    }
+
+    &:before {
+        content: "?";
+        display: inline-block;
+        width: 2em;
+        height: 2em;
+        border-radius: 1em;
+        overflow: hidden;
+        text-align: center;
+        font-size: 1.6em;
+        font-weight: 500;
+        line-height: 2em;
+        color: #fff;
+        background-color: #514943;
+    }
+
+    span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip: rect(0,0,0,0);
+    }
+
+    span.focusable:active,
+    span.focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
+
+    span.focusable:active,
+    span.focusable:focus {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        overflow: visible;
+        clip: auto;
+    }
 }
 
-._with-tooltip .field-tooltip {
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    right: 0;
+.control-text:focus + .field-tooltip-content,
+.field-tooltip._active .field-tooltip-content,
+.field-tooltip:hover .field-tooltip-content {
+    display: block;
+}
+
+.field-tooltip-content {
+    & {
+        display: none;
+        z-index: 1;
+        position: absolute;
+        right: -1.8em;
+        bottom: 4.5em;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 320px;
+        padding: 1em;
+        max-width: 80vw;
+        border: 1px solid $tooltip_color_border;
+        background: $tooltip_color_bg;
+        box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &:after,
+    &:before {
+        content: "";
+        display: block;
+        z-index: 3;
+        position: absolute;
+        top: 100%;
+        right: 1em;
+        width: 0;
+        height: 0;
+        border: 16px solid transparent;
+        border-top-color: $tooltip_color_border;
+    }
+
+    &:after {
+        z-index: 4;
+        margin-top: -1px;
+        border-top-color: $tooltip_color_bg;
+    }
 }
 
 /* ----------------------------------------------------------
