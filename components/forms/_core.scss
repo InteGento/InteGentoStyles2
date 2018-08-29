@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.1
+Version: 0.6.2
 License: MIT
 */
 
@@ -236,6 +236,10 @@ input.mage-error,
 .actions-toolbar {
     & {
         margin: 2em 0;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
     }
 
     & > * {

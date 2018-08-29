@@ -3,13 +3,15 @@
 /*
 Name: Modals
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.1.0
+Version: 0.1.1
 License: MIT
 */
 
 $integento_modals_header_height: 4em!default;
 $integento_modals_footer_height: 5em!default;
 $integento_modals_overlay_color: rgba(#000,0.8) !default;
+$tiny-max: 500px !default;
+$tiny_only: "max-width: " + $tiny-max !default;
 
 /* ----------------------------------------------------------
   Modals
@@ -105,7 +107,7 @@ $integento_modals_overlay_color: rgba(#000,0.8) !default;
         box-sizing: border-box;
         margin: auto;
         max-height: 90vh;
-        max-width: 90vw;
+        max-width: 95vw;
         min-height: 150px;
         min-width: 250px;
         overflow-x: hidden;
@@ -125,5 +127,11 @@ $integento_modals_overlay_color: rgba(#000,0.8) !default;
         bottom: 0;
         height: $integento_modals_footer_height;
         line-height: $integento_modals_footer_height;
+    }
+}
+
+@media($tiny_only) {
+    .modal-inner-wrap {
+        width: 95vw;
     }
 }
