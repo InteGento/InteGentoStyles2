@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.8.2
+Version: 0.8.3
 License: MIT
 */
 
@@ -195,13 +195,14 @@ License: MIT
   Pager
 ---------------------------------------------------------- */
 
-.toolbar-products {
-    .pages .label {
+.pager {
+    .pages .label,
+    .toolbar-amount {
         display: none;
     }
 
     .pages-items {
-        text-align: right;
+        text-align: center;
     }
 
     .pages-items > li {
