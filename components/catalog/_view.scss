@@ -12,18 +12,32 @@
     .catalog-product-view .product.media,
     .catalog-product-view .product-info-main {
         float: right;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
     }
 
     .catalog-product-view .product.media {
         width: 60%;
+        padding-right: $desktop-padding/2;
     }
 
     .catalog-product-view .product-info-main {
         width: 40%;
+        padding-left: $desktop-padding/2;
     }
 
     .catalog-product-view .product.media + * {
         clear: both;
+    }
+}
+
+@media($desktop_only) {
+    .catalog-product-view .product.media {
+        padding-right: $tablet-padding/2;
+    }
+
+    .catalog-product-view .product-info-main {
+        padding-left: $tablet-padding/2;
     }
 }
 
