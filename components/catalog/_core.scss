@@ -3,7 +3,7 @@
 /*
 Name: Catalog
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.3.1
 License: MIT
 */
 
@@ -42,11 +42,12 @@ $font-size: 14px!default;
 }
 
 .product-items.list .product-item {
-    float: left;
+    display: inline-block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     padding: 0 $desktop-padding/2 $desktop-padding*2;
+    vertical-align: top;
 }
 
 @media($large_only) {
