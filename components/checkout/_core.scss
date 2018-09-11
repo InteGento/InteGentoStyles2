@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.1
+Version: 0.5.2
 License: MIT
 */
 
@@ -129,10 +129,7 @@ dl.item-options {
 .payment-method:not(._active) {
     legend.legend,
     .fieldset,
-    & > .payment-method-content > p,
-    & > .payment-method-content > br,
-    & > .payment-method-content > .payment-method-billing-address,
-    & > .payment-method-content > .actions-toolbar {
+    & > .payment-method-content {
         display: none;
     }
 }
