@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.2
+Version: 0.6.3
 License: MIT
 */
 
@@ -171,10 +171,16 @@ $tooltip_color_border: $color-border!default;
   Field indications
 ---------------------------------------------------------- */
 
+.control,
+.field {
+    div.mage-error,
+    div.field-error {
+        @extend %integento-field-error !optional;
+    }
+}
+
 [id="password-strength-meter-container"],
-%integento-field-error,
-.field div.field-error,
-.field div.mage-error {
+%integento-field-error {
     padding: 0.5em 0;
     font-size: 0.9em;
 }
@@ -182,9 +188,7 @@ $tooltip_color_border: $color-border!default;
 /* Errors
 -------------------------- */
 
-%integento-field-error,
-.field div.field-error,
-.field div.mage-error {
+%integento-field-error {
     font-style: italic;
     color: #C00;
 }
