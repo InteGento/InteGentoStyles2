@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.2
+Version: 0.5.3
 License: MIT
 */
 
@@ -45,25 +45,27 @@ $mobile-padding: 15px!default;
 ---------------------------------------------------------- */
 
 .loading-mask {
-    @extend .absolute-cover!optional;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    padding: $desktop-padding;
-    text-align: center;
-    background-color: rgba(#FFF,0.2);
-}
+    & {
+        @extend .absolute-cover!optional;
+        z-index: 10;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: $desktop-padding;
+        text-align: center;
+        background-color: rgba(#FFF,0.2);
+    }
 
-.loading-mask .loader {
-    display: inline-block;
-    z-index: 1;
-    position: relative;
-    width: 3em;
-    height: 3em;
-    vertical-align: top;
-}
+    .loader {
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+        width: 3em;
+        vertical-align: top;
+    }
 
-.loading-mask .loader img {
-    width: 100%;
+    .loader img {
+        width: 100%;
+    }
 }
 
 /* ----------------------------------------------------------

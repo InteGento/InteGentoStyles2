@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+/*
+Name: Customer
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.2.0
+License: MIT
+*/
+
 /* ----------------------------------------------------------
   Customer
 ---------------------------------------------------------- */
@@ -21,5 +28,41 @@
     .block-content {
         @extend .desktop-grid-table;
         margin-bottom: 20px;
+    }
+}
+
+/* Addresses boxes
+-------------------------- */
+
+%address-item-content {
+    font-size: inherit;
+}
+
+%address-item-actions {
+    margin-top: $line-height-em;
+}
+
+/* Selectors */
+
+.box-shipping-address,
+.box-billing-address,
+.box-address-shipping,
+.box-address-billing {
+    .box-actions {
+        @extend %address-item-actions;
+    }
+
+    address {
+        @extend %address-item-content;
+    }
+}
+
+.items.addresses {
+    address {
+        @extend %address-item-content;
+    }
+
+    .item.actions {
+        @extend %address-item-actions;
     }
 }
