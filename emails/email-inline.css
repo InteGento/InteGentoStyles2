@@ -1,0 +1,88 @@
+/* EMAILS INLINE V 0.1.0 */
+
+/* ----------------------------------------------------------
+  Tables
+---------------------------------------------------------- */
+
+table {
+    display: table;
+    width: 100%;
+    margin-bottom: 10px;
+    border-collapse: collapse;
+    border-spacing: 0;
+    table-layout: fixed;
+}
+
+td,
+th {
+    text-align: left;
+    vertical-align: top;
+}
+
+.main-content td {
+    padding: 0 10px;
+}
+
+.main-content td:first-child {
+    padding-left: 0;
+}
+
+.main-content td:last-child {
+    padding-right: 0;
+}
+
+/* ----------------------------------------------------------
+  Text
+---------------------------------------------------------- */
+
+li,
+p,
+td,
+th,
+ul {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+p {
+    margin: 0 0 1em;
+}
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.wrapper-inner {
+    margin: auto;
+}
+
+.wrapper-inner > table {
+    width: 700px;
+}
+
+/* Header
+-------------------------- */
+
+td.header {
+    padding: 40px;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------
+  Orders
+---------------------------------------------------------- */
+
+.email-items th:last-child,
+.email-items td:last-child,
+.order-totals th:last-child {
+    text-align: right;
+}
+
+/* ----------------------------------------------------------
+  Message info
+---------------------------------------------------------- */
+
+table.message-info td {
+    padding: 10px!important;
+    border: 1px solid #ccc;
+}
