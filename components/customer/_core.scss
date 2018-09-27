@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.2.1
 License: MIT
 */
 
@@ -65,4 +65,13 @@ License: MIT
     .item.actions {
         @extend %address-item-actions;
     }
+}
+
+/* Order pages
+-------------------------- */
+
+.sales-order-shipment,
+.sales-order-invoice,
+.sales-order-view {
+    @extend %sales-order-page !optional;
 }
