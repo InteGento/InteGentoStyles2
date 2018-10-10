@@ -3,7 +3,7 @@
 /*
 Name: Catalog
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.2
+Version: 0.3.3
 License: MIT
 */
 
@@ -87,6 +87,7 @@ $font-size: 14px!default;
 /* Item
 -------------------------- */
 
+.product-item-info,
 .product-item {
     button.tocart {
         display: block;
