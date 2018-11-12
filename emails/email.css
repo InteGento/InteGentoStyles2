@@ -1,4 +1,4 @@
-/* EMAILS V 0.1.0 */
+/* EMAILS V 0.2.0 */
 
 body {
 }
@@ -74,4 +74,52 @@ h1:first-child {
 
 p:last-child {
     margin-bottom: 0!important;
+}
+
+/* Tables
+-------------------------- */
+
+table,
+thead,
+tbody,
+tfoot,
+tr,
+th,
+td {
+    font: inherit;
+}
+
+/* ----------------------------------------------------------
+  Layout
+---------------------------------------------------------- */
+
+.wrapper {
+    margin: 0 auto;
+}
+
+.wrapper-inner {
+    width: 100%;
+    padding-bottom: 0;
+}
+
+/* ----------------------------------------------------------
+  Specific fixes
+---------------------------------------------------------- */
+
+body,
+table,
+td,
+a {
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+img {
+    -ms-interpolation-mode: bicubic;
+}
+
+table,
+td {
+    mso-table-lspace: 0;
+    mso-table-rspace: 0;
 }

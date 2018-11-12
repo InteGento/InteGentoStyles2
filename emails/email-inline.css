@@ -1,4 +1,4 @@
-/* EMAILS INLINE V 0.1.0 */
+/* EMAILS INLINE V 0.1.1 */
 
 /* ----------------------------------------------------------
   Tables
@@ -40,12 +40,36 @@ p,
 td,
 th,
 ul {
+    margin: 0;
+    padding: 0;
     font-size: 13px;
     line-height: 1.5;
 }
 
 p {
     margin: 0 0 1em;
+}
+
+/* ----------------------------------------------------------
+  Buttons
+---------------------------------------------------------- */
+
+.button a,
+.button-secondary a {
+    display: block;
+    padding: 1em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: "Open Sans",Arial,sans-serif;
+    line-height: 1;
+    color: #FFF;
+    background-color: #333;
+}
+
+.button-secondary a {
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #F0F0F0;
 }
 
 /* ----------------------------------------------------------
