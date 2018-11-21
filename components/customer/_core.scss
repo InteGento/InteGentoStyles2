@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.1
+Version: 0.2.2
 License: MIT
 */
 
@@ -39,7 +39,7 @@ License: MIT
 }
 
 %address-item-actions {
-    margin-top: $line-height-em;
+    padding-top: $line-height-em;
 }
 
 /* Selectors */
@@ -74,4 +74,33 @@ License: MIT
 .sales-order-invoice,
 .sales-order-view {
     @extend %sales-order-page !optional;
+}
+
+/* Wishlist
+-------------------------- */
+
+.products-grid.wishlist .product-items {
+    z-index: 1;
+    position: relative;
+    text-align: left;
+}
+
+.products-grid.wishlist .product-items li {
+    display: inline-block;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 33.3%;
+    vertical-align: top;
+}
+
+@media($desktop_excluded) {
+    .products-grid.wishlist .product-items li {
+        width: 50%;
+    }
+}
+
+@media($tiny_only) {
+    .products-grid.wishlist .product-items li {
+        width: 100%;
+    }
 }
