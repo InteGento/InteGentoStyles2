@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.8.3
+Version: 0.8.4
 License: MIT
 */
 
@@ -93,6 +93,7 @@ License: MIT
 /* Message
 -------------------------- */
 
+.messages .message,
 %integentostyles-message {
     & {
         margin: 0 0 1em;
@@ -106,18 +107,19 @@ License: MIT
     }
 }
 
+.message.notice {
+    color: #009;
+}
+
 .message.error {
-    @extend %integentostyles-message;
     color: #C00;
 }
 
 .message.success {
-    @extend %integentostyles-message;
     color: #090;
 }
 
 .message.warning {
-    @extend %integentostyles-message;
     color: #CC0;
 }
 
