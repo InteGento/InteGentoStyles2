@@ -3,13 +3,21 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.2
+Version: 0.2.3
 License: MIT
 */
 
 /* ----------------------------------------------------------
   Customer
 ---------------------------------------------------------- */
+
+.customer-account-create,
+.customer-account-logoutsuccess,
+.customer-account-createpassword,
+.customer-account-forgotpassword,
+.customer-account-login {
+    @extend %customer-public-pages !optional;
+}
 
 /* Login
 -------------------------- */

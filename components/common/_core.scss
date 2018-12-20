@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.8.4
+Version: 0.8.5
 License: MIT
 */
 
@@ -135,7 +135,6 @@ License: MIT
         width: auto;
         height: 2.5em;
         padding: 0 0.25em;
-        padding-right: 20px;
         border: 1px solid rgba(0,0,0,0.2);
         overflow: visible;
         line-height: 2.5;
@@ -147,6 +146,15 @@ License: MIT
         user-select: none;
     }
 
+    .switcher-trigger {
+        padding-right: 20px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        text-transform: uppercase;
+        white-space: nowrap;
+        word-wrap: normal;
+    }
+
     &:after {
         content: '';
         z-index: 1;
@@ -156,10 +164,12 @@ License: MIT
         margin-top: -2px;
         border: 0 solid transparent;
         border-width: 5px 4px;
-        border-top-color: #000;
+        border-top-color: currentColor;
     }
+}
 
-    .switcher-dropdown {
+.switcher-options .switcher-dropdown {
+    & {
         visibility: hidden;
         z-index: 2;
         position: absolute;
@@ -173,22 +183,22 @@ License: MIT
         transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
-    .switcher-dropdown[aria-hidden="false"] {
+    &[aria-hidden="false"] {
         visibility: visible;
         opacity: 0.999;
     }
 
-    .switcher-dropdown li {
+    li {
         line-height: 2;
         white-space: nowrap;
     }
 
-    .switcher-dropdown a {
+    a {
         display: block;
         padding: 0 0.25em;
     }
 
-    .switcher-dropdown li + li {
+    li + li {
         border-top: 1px solid rgba(0,0,0,0.2);
     }
 }
