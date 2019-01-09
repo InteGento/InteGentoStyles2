@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.3
+Version: 0.6.4
 License: MIT
 */
 
@@ -227,7 +227,7 @@ input.mage-error,
 ---------------------------------------------------------- */
 
 .fieldset + .fieldset {
-    margin-top: 2em;
+    margin-top: $fieldset-margin;
 }
 
 /* ----------------------------------------------------------
@@ -239,7 +239,7 @@ input.mage-error,
 
 .actions-toolbar {
     & {
-        margin: 2em 0;
+        margin: $fieldset-margin 0;
     }
 
     &:last-child {
@@ -259,7 +259,7 @@ input.mage-error,
 @media(max-width:500px) {
     .actions-toolbar > * {
         display: block;
-        margin: 1em 0;
+        margin: $fieldset-margin/2 0;
     }
 
     .actions-toolbar > * + * {
@@ -315,6 +315,7 @@ input.mage-error,
     }
 
     .nested-fields .field:last-child {
+        margin-top: 0;
         padding-right: 0;
     }
 }
