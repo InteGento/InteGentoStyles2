@@ -3,10 +3,11 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.3
+Version: 0.5.4
 License: MIT
 */
 
+$desktop-padding: 30px!default;
 $mobile-padding: 15px!default;
 /* ----------------------------------------------------------
   Layout
@@ -46,7 +47,7 @@ $mobile-padding: 15px!default;
 
 .loading-mask {
     & {
-        @extend .absolute-cover!optional;
+        @extend %absolute-cover!optional;
         z-index: 10;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -56,15 +57,17 @@ $mobile-padding: 15px!default;
     }
 
     .loader {
-        display: inline-block;
-        z-index: 1;
-        position: relative;
-        width: 3em;
-        vertical-align: top;
+        @extend %absolute-center!optional;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        padding: $mobile-padding;
+        background-color: #fff;
     }
 
     .loader img {
-        width: 100%;
+        position: static!important;
+        width: 2em;
+        max-width: 100%;
     }
 }
 
