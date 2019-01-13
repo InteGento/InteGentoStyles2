@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.4
+Version: 0.5.5
 License: MIT
 */
 
@@ -41,6 +41,16 @@ $mobile-padding: 15px!default;
     display: block!important;
 }
 
+.opc-block-summary,
+#cart-totals,
+#opc-shipping_method,
+#co-shipping-method-form {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+}
+
 /* ----------------------------------------------------------
   Loader
 ---------------------------------------------------------- */
@@ -54,6 +64,10 @@ $mobile-padding: 15px!default;
         padding: $desktop-padding;
         text-align: center;
         background-color: rgba(#FFF,0.2);
+    }
+
+    body > & {
+        position: fixed;
     }
 
     .loader {
