@@ -3,9 +3,12 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.3
+Version: 0.2.4
 License: MIT
 */
+
+$desktop_excluded: "max-width:1023px" !default;
+$tiny_only:"max-width:499px" !default;
 
 /* ----------------------------------------------------------
   Customer
@@ -29,7 +32,6 @@ License: MIT
 /* Dashboard
 -------------------------- */
 
-.block-addresses-list,
 .block-dashboard-info,
 .block-dashboard-addresses,
 .block-addresses-default {
@@ -72,6 +74,28 @@ License: MIT
 
     .item.actions {
         @extend %address-item-actions;
+    }
+}
+
+/* Lists */
+
+.items.addresses > li {
+    display: inline-block;
+    width: 33%;
+    padding-bottom: 2em;
+    vertical-align: top;
+}
+
+@media($desktop_excluded) {
+    .items.addresses > li {
+        width: 49%;
+    }
+}
+
+@media($tiny_only) {
+    .items.addresses > li {
+        display: block;
+        width: 100%;
     }
 }
 
