@@ -3,13 +3,22 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.5
+Version: 0.6.6
 License: MIT
 */
 
+/* Default vars */
 $fieldset-margin: 2em!default;
+$color-bg:#F0F0F0!default;
+$color-border:#CCC!default;
+
+/* Custom vars */
 $tooltip_color_bg: $color-bg!default;
 $tooltip_color_border: $color-border!default;
+$integento_error_color: #C00!default;
+$integento_medium_color: #ffa500!default;
+$integento_valid_color: #0C0!default;
+
 /* ----------------------------------------------------------
   Tooltip
 ---------------------------------------------------------- */
@@ -190,14 +199,14 @@ $tooltip_color_border: $color-border!default;
 
 %integento-field-error {
     font-style: italic;
-    color: #C00;
+    color: $integento_error_color;
 }
 
 %integento-field-error-content,
 input.mage-error,
 .field._error input[aria-invalid="true"] {
-    border-color: #C00;
-    color: #C00;
+    border-color: $integento_error_color;
+    color: $integento_error_color;
 }
 
 /* Password strength
@@ -206,19 +215,19 @@ input.mage-error,
 [id="password-strength-meter-label"] {
     .password-weak &,
     .password-strength-meter-1 & {
-        color: #C00;
+        color: $integento_error_color;
     }
 
     .password-medium &,
     .password-strength-meter-2 & {
-        color: #ffa500;
+        color: $integento_medium_color;
     }
 
     .password-strong &,
     .password-very-strong &,
     .password-strength-meter-4 &,
     .password-strength-meter-3 & {
-        color: #0C0;
+        color: $integento_valid_color;
     }
 }
 
@@ -285,7 +294,7 @@ input.mage-error,
   Nested fields
 ---------------------------------------------------------- */
 
-.nested-fields {
+%nested-fields {
     & {
         margin-bottom: $fieldset-margin;
     }
@@ -300,7 +309,7 @@ input.mage-error,
 }
 
 @media($mobile_excluded) {
-    .nested-fields .field {
+    %nested-fields .field {
         float: left;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
@@ -310,12 +319,16 @@ input.mage-error,
         padding-left: $fieldset-margin/2;
     }
 
-    .nested-fields .field:first-child {
+    %nested-fields .field:first-child {
         padding-left: 0;
     }
 
-    .nested-fields .field:last-child {
+    %nested-fields .field:last-child {
         margin-top: 0;
         padding-right: 0;
     }
+}
+
+.nested-fields {
+    @extend %nested-fields;
 }

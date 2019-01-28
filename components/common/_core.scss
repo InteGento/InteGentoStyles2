@@ -3,9 +3,14 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.8.5
+Version: 0.8.6
 License: MIT
 */
+
+$integento_message_color_notice: #009!default;
+$integento_message_color_error: #C00!default;
+$integento_message_color_success: #090!default;
+$integento_message_color_warning: #CC0!default;
 
 /* ----------------------------------------------------------
   Skip content
@@ -108,19 +113,19 @@ License: MIT
 }
 
 .message.notice {
-    color: #009;
+    color: $integento_message_color_notice;
 }
 
 .message.error {
-    color: #C00;
+    color: $integento_message_color_error;
 }
 
 .message.success {
-    color: #090;
+    color: $integento_message_color_success;
 }
 
 .message.warning {
-    color: #CC0;
+    color: $integento_message_color_warning;
 }
 
 /* ----------------------------------------------------------
