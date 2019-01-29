@@ -3,14 +3,14 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.6
+Version: 0.6.7
 License: MIT
 */
 
 /* Default vars */
 $fieldset-margin: 2em!default;
-$color-bg:#F0F0F0!default;
-$color-border:#CCC!default;
+$color-bg: #F0F0F0!default;
+$color-border: #CCC!default;
 
 /* Custom vars */
 $tooltip_color_bg: $color-bg!default;
@@ -101,15 +101,24 @@ $integento_valid_color: #0C0!default;
     }
 }
 
-.control-text:focus + .field-tooltip-content,
-.field-tooltip._active .field-tooltip-content,
-.field-tooltip:hover .field-tooltip-content {
-    display: block;
-}
+/* Switch */
 
 .field-tooltip-content {
     & {
         display: none;
+    }
+
+    .control-text:focus + &,
+    .field-tooltip._active &,
+    .field-tooltip:hover & {
+        display: block;
+    }
+}
+
+/* Design */
+
+.field-tooltip-content {
+    & {
         z-index: 1;
         position: absolute;
         right: -0.8em;
@@ -202,11 +211,18 @@ $integento_valid_color: #0C0!default;
     color: $integento_error_color;
 }
 
-%integento-field-error-content,
 input.mage-error,
-.field._error input[aria-invalid="true"] {
+%integento-field-error-content {
     border-color: $integento_error_color;
     color: $integento_error_color;
+}
+
+.field._error .control {
+    input[aria-invalid="true"],
+    select[aria-invalid="true"],
+    textarea[aria-invalid="true"] {
+        @extend %integento-field-error-content;
+    }
 }
 
 /* Password strength
@@ -235,8 +251,14 @@ input.mage-error,
   Fieldset
 ---------------------------------------------------------- */
 
-.fieldset + .fieldset {
-    margin-top: $fieldset-margin;
+.fieldset {
+    & + & {
+        margin-top: $fieldset-margin;
+    }
+
+    legend + br {
+        display: none;
+    }
 }
 
 /* ----------------------------------------------------------
@@ -300,7 +322,7 @@ input.mage-error,
     }
 
     &:after {
-        @extend .clearfix;
+        @extend .clearfix!optional;
     }
 
     .field:last-child {
