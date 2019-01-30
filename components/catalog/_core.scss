@@ -100,11 +100,11 @@ $font-size: 14px!default;
   Prices
 ---------------------------------------------------------- */
 
-.price-box {
-    .old-price {
-        text-decoration: line-through;
-    }
+.old-price {
+    text-decoration: line-through;
+}
 
+.price-box {
     .special-price + .old-price {
         margin-left: 0.3em;
     }

@@ -3,12 +3,12 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.4
+Version: 0.2.5
 License: MIT
 */
 
-$desktop_excluded: "max-width:1023px" !default;
-$tiny_only:"max-width:499px" !default;
+$desktop_excluded: "max-width: 1023px" !default;
+$tiny_only: "max-width: 499px" !default;
 
 /* ----------------------------------------------------------
   Customer
@@ -111,13 +111,13 @@ $tiny_only:"max-width:499px" !default;
 /* Wishlist
 -------------------------- */
 
-.products-grid.wishlist .product-items {
+%product-grid-wishlist {
     z-index: 1;
     position: relative;
     text-align: left;
 }
 
-.products-grid.wishlist .product-items li {
+%product-grid-wishlist li {
     display: inline-block;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -126,13 +126,17 @@ $tiny_only:"max-width:499px" !default;
 }
 
 @media($desktop_excluded) {
-    .products-grid.wishlist .product-items li {
+    %product-grid-wishlist li {
         width: 50%;
     }
 }
 
 @media($tiny_only) {
-    .products-grid.wishlist .product-items li {
+    %product-grid-wishlist li {
         width: 100%;
     }
+}
+
+.products-grid.wishlist .product-items {
+    @extend %product-grid-wishlist;
 }

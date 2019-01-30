@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+/*
+Name: Mini Cart
+URL: https://github.com/InteGento/InteGentoStyles2
+Version: 0.2.0
+License: MIT
+*/
+
+$minicart_image_item_width: 70px!default;
+$minicart_image_item_margin: 10px!default;
+/* ----------------------------------------------------------
+  Mini cart
+---------------------------------------------------------- */
+
+.page-header .minicart-wrapper {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    .mage-dropdown-dialog {
+        display: block!important;
+        visibility: hidden;
+        z-index: 1;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        text-align: left;
+        opacity: 0;
+        background-color: #fff;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
+    }
+
+    &.active .mage-dropdown-dialog {
+        visibility: visible;
+        opacity: 0.999;
+    }
+
+    .block-minicart .block-title {
+        display: none;
+    }
+
+    .block-minicart .block-content {
+        background-color: #fff;
+    }
+
+    .counter-label,
+    .counter.empty {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------
+  Mini cart - items
+---------------------------------------------------------- */
+
+.minicart-items {
+    & {
+        margin-bottom: $mobile-padding;
+    }
+
+    .product-item {
+        z-index: 1;
+        position: relative;
+        margin-bottom: $mobile-padding;
+        padding-left: $minicart_image_item_width + $minicart_image_item_margin;
+        min-height: $minicart_image_item_width;
+    }
+
+    .product-item:last-child {
+        margin-bottom: 0;
+    }
+
+    .product > .product-image-container,
+    .product > .product-item-photo {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: $minicart_image_item_width!important;
+        height: $minicart_image_item_width!important;
+        text-align: center;
+    }
+
+    .product > .product-image-container img,
+    .product > .product-item-photo img {
+        width: 100%!important;
+        height: auto!important;
+        max-height: $minicart_image_item_width;
+        max-width: $minicart_image_item_width;
+    }
+}
