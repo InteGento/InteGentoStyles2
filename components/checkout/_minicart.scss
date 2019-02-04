@@ -3,12 +3,13 @@
 /*
 Name: Mini Cart
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.2.1
 License: MIT
 */
 
 $minicart_image_item_width: 70px!default;
 $minicart_image_item_margin: 10px!default;
+
 /* ----------------------------------------------------------
   Mini cart
 ---------------------------------------------------------- */
@@ -90,5 +91,15 @@ $minicart_image_item_margin: 10px!default;
         height: auto!important;
         max-height: $minicart_image_item_width;
         max-width: $minicart_image_item_width;
+    }
+}
+
+/* ----------------------------------------------------------
+  Mini cart - prices
+---------------------------------------------------------- */
+
+.table-totals {
+    tr.totals.discount .amount {
+        white-space: nowrap;
     }
 }
