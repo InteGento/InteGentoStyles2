@@ -17,6 +17,11 @@ relative_assets = true
 line_comments = false
 preferred_syntax = :scss
 
+# Ensure folder exists
+unless File.directory?(css_dir)
+  FileUtils.mkdir_p(css_dir)
+end
+
 # Removes all comments completely
 class Sass::Tree::Visitors::Perform < Sass::Tree::Visitors::Base
   def visit_comment(node)
@@ -45,7 +50,13 @@ require 'fileutils'
   on_stylesheet_saved do |file|
   if File.exists?(file)
     integento_theme_lang_supp.each do |i|
-      new_file = integento_css_dir + i + "/css/" + File.basename(file, File.extname(file)) + File.extname(file);
+      # Ensure folder exists
+      new_dir = integento_css_dir + i + "/css/"
+      unless File.directory?(new_dir)
+        FileUtils.mkdir_p(new_dir)
+      end
+      # Create file
+      new_file = new_dir + File.basename(file, File.extname(file)) + File.extname(file);
       FileUtils.cp(file, new_file);
     end
   end
