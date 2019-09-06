@@ -3,7 +3,7 @@
 /*
 Name: Mini Cart
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.1
+Version: 0.2.2
 License: MIT
 */
 
@@ -56,6 +56,10 @@ $minicart_image_item_margin: 10px!default;
 /* ----------------------------------------------------------
   Mini cart - items
 ---------------------------------------------------------- */
+
+.minicart-items-wrapper {
+    height: auto!important;
+}
 
 .minicart-items {
     & {
