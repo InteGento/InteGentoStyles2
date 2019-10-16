@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.8.7
+Version: 0.9.0
 License: MIT
 */
 
@@ -237,4 +237,46 @@ $integento_message_color_warning: #CC0!default;
     & > .page-main.banner-title > .banner-title-wrapper {
         @extend %banner-title-wrapper !optional;
     }
+}
+
+/* ----------------------------------------------------------
+  Utilities
+---------------------------------------------------------- */
+
+%integento-hidden {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+}
+
+%integento-disabled {
+    outline: 0;
+    opacity: .5;
+    box-shadow: none;
+    cursor: default;
+}
+
+._disabled {
+    @extend %integento-disabled;
+}
+
+._no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+    -ms-user-select: none;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
+
+input.no-display,
+.no-display {
+    display: none;
+}
+
+.code-sample {
+    font-family: monospace,serif;
 }
