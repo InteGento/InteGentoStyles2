@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.5.6
+Version: 0.6.0
 License: MIT
 */
 
@@ -177,6 +177,44 @@ dl.item-options {
     th:last-child,
     td:last-child {
         text-align: right;
+    }
+}
+
+/* ----------------------------------------------------------
+  Progress bar
+---------------------------------------------------------- */
+
+.opc-progress-bar {
+    & {
+        @extend %responsive-margin-tb;
+        counter-reset: opcprogressbar;
+        z-index: 1;
+        position: relative;
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+
+    .opc-progress-bar-item {
+        counter-increment: opcprogressbar;
+        display: inline-block;
+        z-index: 1;
+        position: relative;
+        vertical-align: top;
+    }
+
+    .opc-progress-bar-item + .opc-progress-bar-item {
+        margin-left: 1em;
+    }
+
+    .opc-progress-bar-item:before {
+        content: counter(opcprogressbar);
+        display: block;
+        z-index: 1;
+        position: relative;
+        margin: auto;
+        text-align: center;
+        vertical-align: top;
     }
 }
 

@@ -3,16 +3,18 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.7
+Version: 0.6.8
 License: MIT
 */
 
 /* Default vars */
+
 $fieldset-margin: 2em!default;
 $color-bg: #F0F0F0!default;
 $color-border: #CCC!default;
 
 /* Custom vars */
+
 $tooltip_color_bg: $color-bg!default;
 $tooltip_color_border: $color-border!default;
 $integento_error_color: #C00!default;
@@ -28,6 +30,10 @@ $integento_valid_color: #0C0!default;
         z-index: 1;
         position: relative;
         padding-right: 30px;
+    }
+
+    .label {
+        @extend %integento-hidden;
     }
 
     .field-tooltip {
