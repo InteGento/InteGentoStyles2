@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.8
+Version: 0.6.9
 License: MIT
 */
 
@@ -234,6 +234,7 @@ input.mage-error,
 /* Password strength
 -------------------------- */
 
+%password-strength-meter-label,
 [id="password-strength-meter-label"] {
     .password-weak &,
     .password-strength-meter-1 & {
