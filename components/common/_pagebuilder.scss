@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+/* ----------------------------------------------------------
+  Visibility
+---------------------------------------------------------- */
+
+@media($mobile_excluded) {
+    .pagebuilder-mobile-only {
+        display: none;
+    }
+}
+
+@media($mobile_only) {
+    .pagebuilder-mobile-hidden {
+        display: none;
+    }
+}
