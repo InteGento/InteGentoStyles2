@@ -9,3 +9,26 @@
         font-weight: bold;
     }
 }
+
+/* ----------------------------------------------------------
+  Submenu
+---------------------------------------------------------- */
+
+@media($has_desktop_menu) {
+    .navigation[data-action="navigation"] .level1 ul {
+        display: block!important;
+        top: 0%!important;
+        right: 0!important;
+        left: 0!important;
+    }
+
+    .navigation[data-action="navigation"] .level0 > .submenu {
+        position: absolute!important;
+        top: 100%!important;
+        right: 0!important;
+        left: 0!important;
+        margin: auto!important;
+        padding: 10px;
+        background-color: #fff;
+    }
+}
