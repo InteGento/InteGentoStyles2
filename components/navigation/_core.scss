@@ -3,12 +3,13 @@
 /*
 Name: Navigation
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.1
+Version: 0.2.2
 License: MIT
 */
 
 $has_desktop_menu: $desktop_only!default;
 $has_mobile_menu: $desktop_excluded!default;
+
 /* ----------------------------------------------------------
   Navigation
 ---------------------------------------------------------- */
@@ -42,6 +43,14 @@ $has_mobile_menu: $desktop_excluded!default;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         vertical-align: top;
+    }
+
+    ul[style*="top:"] {
+        top: 0!important;
+    }
+
+    ul[style*="left:"] {
+        left: 0!important;
     }
 }
 
@@ -109,6 +118,7 @@ $has_mobile_menu: $desktop_excluded!default;
         transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
+    .nav-open .navigation[data-action="navigation"],
     .has--opened-main-menu .navigation[data-action="navigation"] {
         visibility: visible;
         opacity: 0.999;
