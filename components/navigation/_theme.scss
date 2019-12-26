@@ -1,6 +1,16 @@
 @charset "UTF-8";
 
 /* ----------------------------------------------------------
+  Reset
+---------------------------------------------------------- */
+
+.nav-sections-items {
+    .section-item-title {
+        display: none;
+    }
+}
+
+/* ----------------------------------------------------------
   Navigation
 ---------------------------------------------------------- */
 
@@ -31,4 +41,25 @@
         padding: 10px;
         background-color: #fff;
     }
+}
+
+/* ----------------------------------------------------------
+  Switch
+---------------------------------------------------------- */
+
+/* Bars */
+
+%csscommon-navtoggle-bar {
+    width: 20px;
+    height: 2px;
+    font-size: 3.5px;
+    color: transparent;
+    background-color: #000;
+    cursor: pointer;
+}
+
+/* Active */
+
+.nav-open .nav-toggle {
+    @extend %csscommon-navtoggle-bar-active!optional;
 }

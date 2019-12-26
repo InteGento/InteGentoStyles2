@@ -3,7 +3,7 @@
 /*
 Name: Navigation
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.2
+Version: 0.2.3
 License: MIT
 */
 
@@ -101,7 +101,7 @@ $has_mobile_menu: $desktop_excluded!default;
 -------------------------- */
 
 @media($has_mobile_menu) {
-    .navigation[data-action="navigation"] {
+    .sections.nav-sections {
         visibility: hidden;
         z-index: 9;
         position: fixed;
@@ -118,13 +118,25 @@ $has_mobile_menu: $desktop_excluded!default;
         transition: opacity 0.3s ease,visibility 0.3s ease;
     }
 
-    .nav-open .navigation[data-action="navigation"],
-    .has--opened-main-menu .navigation[data-action="navigation"] {
+    .nav-open .sections.nav-sections,
+    .has--opened-main-menu .sections.nav-sections {
         visibility: visible;
         opacity: 0.999;
     }
 
-    .navigation[data-action="navigation"] li.level0 {
+    .sections.nav-sections li.level0 {
         padding: $mobile-padding/2 $mobile-padding;
+    }
+}
+
+/* ----------------------------------------------------------
+  Switch
+---------------------------------------------------------- */
+
+/* Action */
+
+@media($has_desktop_menu) {
+    .nav-toggle {
+        display: none;
     }
 }
