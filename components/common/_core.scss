@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.9.1
+Version: 0.9.2
 License: MIT
 */
 
@@ -233,6 +233,7 @@ $integento_message_color_warning: #CC0!default;
 ---------------------------------------------------------- */
 
 #maincontent,
+.page-main,
 .page-wrapper {
     & > .page-main.banner-title > .banner-title-wrapper {
         @extend %banner-title-wrapper !optional;
@@ -245,6 +246,7 @@ $integento_message_color_warning: #CC0!default;
 
 %integento-hidden {
     position: absolute;
+    left: -9999px;
     overflow: hidden;
     clip: rect(0,0,0,0);
 }

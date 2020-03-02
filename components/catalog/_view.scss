@@ -59,3 +59,13 @@
         width: 100%;
     }
 }
+
+/* ----------------------------------------------------------
+  Swatches
+---------------------------------------------------------- */
+
+.product-options-wrapper .swatch-attribute {
+    .swatch-input.super-attribute-select {
+        @extend %integento-hidden;
+    }
+}

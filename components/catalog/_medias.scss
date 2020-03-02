@@ -8,13 +8,7 @@
 -------------------------- */
 
 .product.media .action-skip-wrapper {
-    z-index: 1;
-    position: absolute;
-    top: -999px;
-    left: -999px;
-    width: 1px;
-    height: 1px;
-    overflow: hidden;
+    @extend %integento-hidden;
 }
 
 /* Video

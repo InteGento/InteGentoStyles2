@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.9
+Version: 0.6.10
 License: MIT
 */
 
@@ -84,16 +84,6 @@ $integento_valid_color: #0C0!default;
         border: 0;
         overflow: hidden;
         clip: rect(0,0,0,0);
-    }
-
-    span.focusable:active,
-    span.focusable:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto;
     }
 
     span.focusable:active,
