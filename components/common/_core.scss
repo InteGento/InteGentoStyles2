@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.9.2
+Version: 0.9.3
 License: MIT
 */
 
@@ -235,6 +235,7 @@ $integento_message_color_warning: #CC0!default;
 #maincontent,
 .page-main,
 .page-wrapper {
+    & > .page-title-wrapper .page-title > .base,
     & > .page-main.banner-title > .banner-title-wrapper {
         @extend %banner-title-wrapper !optional;
     }
