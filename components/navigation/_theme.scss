@@ -5,6 +5,7 @@
 ---------------------------------------------------------- */
 
 .nav-sections-items {
+    &[data-mage-init] .submenu,
     .section-item-title {
         display: none;
     }
