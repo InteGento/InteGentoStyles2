@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.0
+Version: 0.6.1
 License: MIT
 */
 
@@ -90,6 +90,7 @@ $mobile-padding: 15px!default;
   Options
 ---------------------------------------------------------- */
 
+dl.item.options,
 dl.item-options {
     & {
         overflow: hidden;

@@ -3,12 +3,14 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.6
+Version: 0.3.0
 License: MIT
 */
 
 $desktop_excluded: "max-width: 1023px" !default;
 $tiny_only: "max-width: 499px" !default;
+$font-size: "13px" !default;
+$mobile-padding: "20px" !default;
 
 /* ----------------------------------------------------------
   Customer
@@ -54,6 +56,8 @@ $tiny_only: "max-width: 499px" !default;
 
 /* Selectors */
 
+.box-information,
+.box-newsletter,
 .box-shipping-address,
 .box-billing-address,
 .box-address-shipping,
@@ -97,6 +101,60 @@ $tiny_only: "max-width: 499px" !default;
     }
 }
 
+/* Sales tables
+-------------------------- */
+
+.table-wrapper.returns table,
+.table-wrapper.orders-history table,
+.table-wrapper.orders-recent table {
+    & {
+        @extend %sales-table !optional;
+        @extend %responsive-table !optional;
+    }
+
+    caption {
+        display: none;
+    }
+}
+
+%sales-table {
+    caption {
+        display: none;
+    }
+}
+
+/* Order links
+-------------------------- */
+
+ul.order-links {
+    & {
+        display: block;
+        margin-bottom: $mobile-padding;
+        font-size: 0;
+    }
+
+    & > * {
+        display: inline-block;
+        box-sizing: border-box;
+        padding-right: 1em;
+        font-size: $font-size;
+    }
+
+    & > *:only-child {
+        display: none;
+    }
+}
+
+/* Order items
+-------------------------- */
+
+@media($mobile_excluded) {
+    .table.table-order-items tfoot th {
+        padding-right: $mobile-padding;
+        text-align: right;
+    }
+}
+
 /* Order pages
 -------------------------- */
 
@@ -136,4 +194,12 @@ $tiny_only: "max-width: 499px" !default;
 
 .products-grid.wishlist .product-items {
     @extend %product-grid-wishlist;
+}
+
+/* ----------------------------------------------------------
+  Comments
+---------------------------------------------------------- */
+
+.order.additional.comments {
+    margin: 2em 0;
 }
