@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.1
+Version: 0.6.2
 License: MIT
 */
 
@@ -30,6 +30,7 @@ $mobile-padding: 15px!default;
   Reset
 ---------------------------------------------------------- */
 
+#checkout > .opc-estimated-wrapper,
 .opc-summary-wrapper .modal-header .action-close {
     display: none;
 }
@@ -81,8 +82,11 @@ $mobile-padding: 15px!default;
 
     .loader img {
         position: static!important;
-        width: 2em;
         max-width: 100%;
+    }
+
+    .loader img:not([src*="loader-2.gif"]) {
+        width: 2em;
     }
 }
 
@@ -231,5 +235,27 @@ dl.item-options {
 
     a {
         border-bottom: 1px solid currentColor;
+    }
+}
+
+/* ----------------------------------------------------------
+  Sidebar
+---------------------------------------------------------- */
+
+/* Checkout
+-------------------------- */
+
+.opc-block-shipping-information .shipping-information-title {
+    & {
+        z-index: 1;
+        position: relative;
+    }
+
+    .action-edit {
+        @extend .buttonreset!optional;
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
     }
 }
