@@ -3,7 +3,7 @@
 /*
 Name: Mini Cart
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.2
+Version: 0.2.3
 License: MIT
 */
 
@@ -105,5 +105,20 @@ $minicart_image_item_margin: 10px!default;
 .table-totals {
     tr.totals.discount .amount {
         white-space: nowrap;
+    }
+}
+
+/* ----------------------------------------------------------
+  Options
+---------------------------------------------------------- */
+
+.product-item-details .product.options {
+    [data-role="content"][role="tabpanel"] .subtitle,
+    [data-role="title"].toggle {
+        display: none;
+    }
+
+    [data-role="content"][role="tabpanel"] {
+        display: block!important;
     }
 }

@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.0
+Version: 0.4.0
 License: MIT
 */
 
@@ -13,7 +13,7 @@ $font-size: "13px" !default;
 $mobile-padding: "20px" !default;
 
 /* ----------------------------------------------------------
-  Customer
+  Public
 ---------------------------------------------------------- */
 
 .customer-account-create,
@@ -31,7 +31,11 @@ $mobile-padding: "20px" !default;
     @extend .desktop-grid-table;
 }
 
-/* Dashboard
+/* ----------------------------------------------------------
+  Dashboard
+---------------------------------------------------------- */
+
+/* Main
 -------------------------- */
 
 .block-dashboard-info,
@@ -71,6 +75,10 @@ $mobile-padding: "20px" !default;
     }
 }
 
+/* ----------------------------------------------------------
+  Addresses
+---------------------------------------------------------- */
+
 .items.addresses {
     address {
         @extend %address-item-content;
@@ -101,19 +109,16 @@ $mobile-padding: "20px" !default;
     }
 }
 
-/* Sales tables
--------------------------- */
+/* ----------------------------------------------------------
+  Orders - List
+---------------------------------------------------------- */
 
-.table-wrapper.returns table,
-.table-wrapper.orders-history table,
-.table-wrapper.orders-recent table {
-    & {
+.table-wrapper.returns,
+.table-wrapper.orders-history,
+.table-wrapper.orders-recent {
+    table {
         @extend %sales-table !optional;
         @extend %responsive-table !optional;
-    }
-
-    caption {
-        display: none;
     }
 }
 
@@ -121,6 +126,28 @@ $mobile-padding: "20px" !default;
     caption {
         display: none;
     }
+}
+
+/* Reset
+-------------------------- */
+
+.sales-order-history .actions-toolbar,
+.order-products-toolbar {
+    display: none;
+}
+
+/* ----------------------------------------------------------
+  Orders - View
+---------------------------------------------------------- */
+
+/* Placeholder
+-------------------------- */
+
+.sales-order-creditmemo,
+.sales-order-shipment,
+.sales-order-invoice,
+.sales-order-view {
+    @extend %sales-order-page !optional;
 }
 
 /* Order links
@@ -145,6 +172,13 @@ ul.order-links {
     }
 }
 
+/* Comments
+-------------------------- */
+
+.order.additional.comments {
+    margin: 2em 0;
+}
+
 /* Order items
 -------------------------- */
 
@@ -155,18 +189,22 @@ ul.order-links {
     }
 }
 
-/* Order pages
+/* Order qty
 -------------------------- */
 
-.sales-order-creditmemo,
-.sales-order-shipment,
-.sales-order-invoice,
-.sales-order-view {
-    @extend %sales-order-page !optional;
+.items-qty li {
+    & {
+        white-space: nowrap;
+    }
+
+    .title:after {
+        content: ' : ';
+    }
 }
 
-/* Wishlist
--------------------------- */
+/* ----------------------------------------------------------
+  Wishlist
+---------------------------------------------------------- */
 
 %product-grid-wishlist {
     z-index: 1;
@@ -194,12 +232,4 @@ ul.order-links {
 
 .products-grid.wishlist .product-items {
     @extend %product-grid-wishlist;
-}
-
-/* ----------------------------------------------------------
-  Comments
----------------------------------------------------------- */
-
-.order.additional.comments {
-    margin: 2em 0;
 }
