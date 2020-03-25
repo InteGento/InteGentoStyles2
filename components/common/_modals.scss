@@ -3,7 +3,7 @@
 /*
 Name: Modals
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.2.0
+Version: 0.2.1
 License: MIT
 */
 
@@ -137,7 +137,7 @@ body._has-modal {
 }
 
 @media($tiny_only) {
-    .modal-inner-wrap {
+    .modals-wrapper .modal-inner-wrap {
         width: 95vw;
     }
 }
