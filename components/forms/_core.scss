@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.10
+Version: 0.7.0
 License: MIT
 */
 
@@ -147,6 +147,43 @@ $integento_valid_color: #0C0!default;
         z-index: 4;
         margin-top: -1px;
         border-top-color: $tooltip_color_bg;
+    }
+}
+
+/* ----------------------------------------------------------
+  Help bubbles
+---------------------------------------------------------- */
+
+.tooltip.wrapper {
+    & {
+        z-index: 2;
+        position: relative;
+    }
+
+    .link.tooltip {
+        border-bottom: 1px dashed;
+    }
+
+    .tooltip.content {
+        visibility: hidden;
+        z-index: 1;
+        position: absolute;
+        bottom: 100%;
+        left: 0;
+        margin-bottom: 5px;
+        padding: 1em;
+        min-width: 200px;
+        border: 1px solid #CCC;
+        opacity: 0;
+        background-color: #fff;
+        -webkit-transition: opacity 0.3s ease,visibility 0.3s ease;
+        transition: opacity 0.3s ease,visibility 0.3s ease;
+    }
+
+    .link.tooltip:focus + .tooltip.content,
+    &:hover .tooltip.content {
+        visibility: visible;
+        opacity: 0.999;
     }
 }
 
