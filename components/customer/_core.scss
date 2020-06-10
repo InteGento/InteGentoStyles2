@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.1
+Version: 0.4.2
 License: MIT
 */
 
@@ -113,6 +113,7 @@ $mobile-padding: "20px" !default;
   Orders - List
 ---------------------------------------------------------- */
 
+.table-wrapper.balance-history,
 .table-wrapper.additional-addresses,
 .table-wrapper.returns,
 .table-wrapper.orders-history,
