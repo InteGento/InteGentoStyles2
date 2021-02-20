@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.7.0
+Version: 0.7.1
 License: MIT
 */
 
@@ -47,6 +47,12 @@ $integento_valid_color: #0C0!default;
     .field-tooltip:hover {
         z-index: 99;
     }
+}
+
+.field-tooltip.toggle {
+    display: inline-block;
+    z-index: 1;
+    position: relative;
 }
 
 .field-tooltip-action {
