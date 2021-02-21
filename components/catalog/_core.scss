@@ -3,11 +3,12 @@
 /*
 Name: Catalog
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.3.7
+Version: 0.4.0
 License: MIT
 */
 
 $font-size: 14px!default;
+
 /* ----------------------------------------------------------
   Category View
 ---------------------------------------------------------- */
@@ -36,18 +37,18 @@ $font-size: 14px!default;
 -------------------------- */
 
 .product-items.list {
+    display: flex;
     z-index: 1;
     position: relative;
+    flex-direction: row;
+    flex-wrap: wrap;
     margin: 0 $desktop-padding-neg/2;
 }
 
 .product-items.list .product-item {
-    display: inline-block;
-    -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 50%;
     padding: 0 $desktop-padding/2 $desktop-padding*2;
-    vertical-align: top;
 }
 
 @media($large_only) {
@@ -87,6 +88,7 @@ $font-size: 14px!default;
 /* Item
 -------------------------- */
 
+.product-item-details,
 .product-item-info,
 .product-item {
     button.tocart {
