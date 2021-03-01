@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.10.0
+Version: 0.10.1
 License: MIT
 */
 
@@ -212,7 +212,9 @@ $integento_message_color_warning: #CC0!default;
   Pager
 ---------------------------------------------------------- */
 
+.toolbar .pages,
 .pager {
+    .label,
     .pages .label,
     .toolbar-amount {
         display: none;
