@@ -3,7 +3,7 @@
 /*
 Name: Common
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.10.1
+Version: 0.11.0
 License: MIT
 */
 
@@ -90,9 +90,14 @@ $integento_message_color_warning: #CC0!default;
 /* Wrapper
 -------------------------- */
 
-.page.messages .messages:not(:empty) {
-    @extend %integento-layout;
-    margin-bottom: 2em;
+.page.messages {
+    body[data-mage-init] & {
+        display: none;
+    }
+
+    .messages:not(:empty) {
+        @extend %integento-layout;
+    }
 }
 
 /* Message
@@ -104,6 +109,14 @@ $integento_message_color_warning: #CC0!default;
         margin: 0 0 1em;
         padding: 1em;
         border: 1px solid;
+    }
+
+    &:last-child {
+        margin-bottom: 2em;
+    }
+
+    &:empty {
+        display: none;
     }
 
     a {
