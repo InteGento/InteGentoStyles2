@@ -3,7 +3,7 @@
 /*
 Name: Forms
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.7.1
+Version: 0.7.2
 License: MIT
 */
 
@@ -29,14 +29,14 @@ $integento_valid_color: #0C0!default;
     & {
         z-index: 1;
         position: relative;
-        padding-right: 30px;
+        padding-right: 2.5em;
     }
 
     .label {
         @extend %integento-hidden;
     }
 
-    .field-tooltip {
+    .field-tooltip.toggle {
         z-index: 1;
         position: absolute;
         top: 0;
