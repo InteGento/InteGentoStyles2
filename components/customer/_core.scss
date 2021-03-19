@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.2
+Version: 0.4.3
 License: MIT
 */
 
@@ -34,6 +34,14 @@ $mobile-padding: "20px" !default;
 /* ----------------------------------------------------------
   Dashboard
 ---------------------------------------------------------- */
+
+.block-dashboard-info,
+.block-dashboard-addresses,
+.block-dashboard-orders,
+.block-addresses-list,
+.block-addresses-default {
+    @extend %block-dashboard-main;
+}
 
 /* Main
 -------------------------- */
