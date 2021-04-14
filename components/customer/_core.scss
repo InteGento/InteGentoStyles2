@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.3
+Version: 0.4.4
 License: MIT
 */
 
@@ -161,6 +161,13 @@ $mobile-padding: "20px" !default;
     @extend %sales-order-page !optional;
 }
 
+/* Table
+-------------------------- */
+
+.table.table-order-items {
+    @extend %sales-order-table !optional;
+}
+
 /* Order links
 -------------------------- */
 
@@ -194,7 +201,7 @@ ul.order-links {
 -------------------------- */
 
 @media($mobile_excluded) {
-    .table.table-order-items tfoot th {
+    %sales-order-table tfoot th {
         padding-right: $mobile-padding;
         text-align: right;
     }
