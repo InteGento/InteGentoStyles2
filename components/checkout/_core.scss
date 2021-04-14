@@ -3,7 +3,7 @@
 /*
 Name: Checkout
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.6.3
+Version: 0.6.4
 License: MIT
 */
 
@@ -136,7 +136,15 @@ dl.item-options {
 
 .shipping-address-items {
     & {
-        @extend .desktop-grid-table!optional;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    & > * {
+        flex: 1 0 40%;
+        box-sizing: border-box;
+        padding-right: 1em;
+        padding-bottom: 1em;
     }
 
     .shipping-address-item .action {
@@ -145,6 +153,12 @@ dl.item-options {
 
     .shipping-address-item.selected-item .action {
         display: none;
+    }
+}
+
+@media($desktop_only) {
+    .shipping-address-items > * {
+        flex: 1 0 30%;
     }
 }
 
