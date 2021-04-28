@@ -3,7 +3,7 @@
 /*
 Name: Customer
 URL: https://github.com/InteGento/InteGentoStyles2
-Version: 0.4.5
+Version: 0.4.6
 License: MIT
 */
 
@@ -142,8 +142,8 @@ $mobile-padding: "20px" !default;
 -------------------------- */
 
 .sales-order-history .actions-toolbar,
-.customer-addresses-toolbar,
-.order-products-toolbar {
+.customer-addresses-toolbar .limiter,
+.order-products-toolbar .limiter {
     display: none;
 }
 
